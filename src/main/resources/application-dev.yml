@@ -7,6 +7,6 @@ spring:
     privateKey: ${MYSQL_PRIVATEKEY:MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAnuETZJOWsfqdmm+fMce4UhzYGSEJNVnzrd7cM+jTLki9geVKTZUd011cOUn80BzH2WkJiT+e8okhwJt6OL29lwIDAQABAkB7ZcrfIfY4E7NW4H0fd8REGl0I32y8gDnQADi9JIbo+aB6/vhaG7SturoqdKZEIvktimC9e+oaM8tEtnW9U0pxAiEA5AA0HBETsCMtakV+jw4Jcc2I3SUzXNlSbB/QRPnf3D8CIQCyY9sJzue99bdfG96eADt5VHJbDdN6iuNYZWc/OZSoqQIhANoFB88+1SC8wpS4V0jcF1PnQlSVWgQTG6mg0jri5ZlpAiAPaAhWxIPHKB16HVIQmzyHsf9eVcdZ4fzYeYl9MF/iYQIgBGsgiy9iDGK7EKiLWph97S4AThm8t1hBHQ5YN+I8nOA=}
     publicKey: ${MYSQL_PUBLICKEY:MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJ7hE2STlrH6nZpvnzHHuFIc2BkhCTVZ863e3DPo0y5IvYHlSk2VHdNdXDlJ/NAcx9lpCYk/nvKJIcCbeji9vZcCAwEAAQ==}
     passwordEncry: ${MYSQL_PASSWORDENCRY:hem9AowecZuuDWZsiQiEg5r4MMvztZrkXz/Ipe5bvYnReOxk46GfSrf5HhqqmS67DMCSAFYN4WpkIe+914bRDw==}
-    url: jdbc:mysql://${HOST:127.0.0.1}:${POST:3306}/${HWORK_DB_DATABASE:hql}?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
+    url: jdbc:mysql://${HOST:123.56.49.202/}:${POST:3306}/${HWORK_DB_DATABASE:text}?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
     username: ${USER_NAME:root}
     password: ${spring.datasource.passwordEncry}
