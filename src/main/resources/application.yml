@@ -3,8 +3,9 @@ spring:
     name: hql-tool
   profiles:
     active: ${SPRING.PROFILES.ACTIVE:dev}
-
-
+mybatis:
+  type-aliases-package: com.hql.tool.model
+  mapper-locations: classpath*:mapper/*.xml
 
 
 
