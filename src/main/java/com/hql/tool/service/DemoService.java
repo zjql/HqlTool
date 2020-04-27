@@ -1,7 +1,7 @@
 package com.hql.tool.service;
 
-import com.hql.tool.model.Demo;
 
+import com.hql.tool.model.Demo;
 
 /**
  * @author zhangzhijie
@@ -9,5 +9,5 @@ import com.hql.tool.model.Demo;
  */
 public interface DemoService {
 
-    Demo getTextData();
+    Demo getTextData(int id);
 }

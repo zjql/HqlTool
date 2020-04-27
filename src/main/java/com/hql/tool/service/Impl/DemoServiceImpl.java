@@ -3,6 +3,7 @@ package com.hql.tool.service.Impl;
 import com.hql.tool.dto.DemoMapper;
 import com.hql.tool.model.Demo;
 import com.hql.tool.service.DemoService;
+import lombok.Value;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,8 @@ public class DemoServiceImpl implements DemoService {
     private DemoMapper demoMapper;
 
     @Override
-    public Demo getTextData() {
-        return demoMapper.queryTextDemo();
+    public Demo getTextData(int id) {
+        return demoMapper.selectByPrimaryKey(id);
+
     }
 }

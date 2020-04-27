@@ -1,6 +1,5 @@
 spring:
   application:
-    # 自定义配置-当前应用名称
     name: hql-tool
   profiles:
     active: ${SPRING.PROFILES.ACTIVE:dev}
