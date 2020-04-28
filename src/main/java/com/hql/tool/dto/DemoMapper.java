@@ -1,7 +1,9 @@
 package com.hql.tool.dto;
 
 import com.hql.tool.model.Demo;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface DemoMapper{
     int deleteByPrimaryKey(Integer id);
 
