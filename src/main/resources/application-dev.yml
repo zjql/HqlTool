@@ -11,7 +11,7 @@ spring:
     passwordEncry: ${MYSQL_PASSWORDENCRY:oSqRyYv6pOnA0JHREEZ9iZ2xVB3Bnf1FPHNYLFpWSELmT5lC5ig1YzzSgt1hJrOwrXeijMxlD011cmV673jOdg==}
     url: jdbc:mysql://${HOST:123.56.49.202}:${POST:3306}/${HWORK_DB_DATABASE:demo}?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
     username: ${USER_NAME:root}
-    password: ${PASS_WORD:@Hql6897..}\
+    password: ${PASS_WORD:@Hql6897..}
     # password: ${spring.datasource.passwordEncry}
 swagger:
   #是否开启swagger
