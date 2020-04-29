@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.hql.tool.dto.DemoMapper">
+<mapper namespace="com.hql.tool.mapper.DemoMapper">
   <resultMap id="BaseResultMap" type="com.hql.tool.model.Demo">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="founder_name" jdbcType="VARCHAR" property="founderName" />
@@ -108,5 +108,11 @@
       remark = #{remark,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="getCreateDateTime" resultType="com.hql.tool.vo.DemoVO">
+    SELECT founder_name AS  name,
+           founder_date AS  dateTime
+    FROM demo
+    WHERE founder_name = #{name}
+  </select>
 </mapper>
 

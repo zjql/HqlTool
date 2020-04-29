@@ -1,7 +1,8 @@
 package com.hql.tool.service;
 
 
-import com.hql.tool.model.Demo;
+import com.hql.tool.dto.DemoDto;
+import com.hql.tool.vo.DemoVO;
 
 /**
  * @author zhangzhijie
@@ -9,5 +10,10 @@ import com.hql.tool.model.Demo;
  */
 public interface DemoService {
 
-    Demo getTextData(int id);
+    /**
+     * 测试接口
+     * @param demoDto
+     * @return
+     */
+    DemoVO getTextData(DemoDto demoDto);
 }
