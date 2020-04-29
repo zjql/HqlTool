@@ -1,4 +1,4 @@
-package com.hql.tool.utils;
+package com.hql.tool.config.utils;
 
 import org.springframework.lang.Nullable;
 import org.springframework.util.Assert;

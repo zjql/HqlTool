@@ -1,4 +1,4 @@
-package com.hql.tool.utils;
+package com.hql.tool.config.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
