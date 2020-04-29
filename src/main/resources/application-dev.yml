@@ -2,17 +2,9 @@ spring:
   datasource:
     # 配置数据库信息
     driver-class-name: com.mysql.jdbc.Driver
-#    druid:
-#      password-callback: com.hql.tool.config.datasource.DbPasswordCallback
-    #数据库密码加密(privateKey/publicKey/passwordEncry通过如下方式加密生成)
-    #java –cp druid-1.1.8.jar com.alibaba.druid.filter.config.ConfigTools 你的密码
-    privateKey: ${MYSQL_PRIVATEKEY:MIIBVAIBADANBgkqhkiG9w0BAQEFAASCAT4wggE6AgEAAkEAwFfMGaVjZjQa/NEzzQELlwk997xr/SzJ6yzB5HockEOceakEhSZMxpDBXxpt1c6m7fDEzo7KIEEtnd2NWWbnhQIDAQABAkA7rkJfJsk72ikRjxwinRNqjuySZP2g9ffFKAMVkKoyPK4jaXiCmL+fZxz8NSk1QYwDpOR9ma6wp02udfkLjeh1AiEA8hQhpobA2uMifjm9GAWUJhQPkDo090RAFbnvJWlzlC8CIQDLZ3W32qcID+/GPsFJpaSAGx4lzmWt0WRHZGHuGwsuiwIgHRpsfT/AGdCqyfAZGrU4/Wb2BAnrajrLVZFX/fByk8MCIA85MhVNlxzCXJbA0aSaciJoZSw9M1z8A/5X5AB3I7IbAiEA6DcT0QZZ1sEo6Ok/9fR220eU1Y+cm66FmslzYHnyIvo=}
-    publicKey: ${MYSQL_PUBLICKEY:MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMBXzBmlY2Y0GvzRM80BC5cJPfe8a/0syessweR6HJBDnHmpBIUmTMaQwV8abdXOpu3wxM6OyiBBLZ3djVlm54UCAwEAAQ==}
-    passwordEncry: ${MYSQL_PASSWORDENCRY:oSqRyYv6pOnA0JHREEZ9iZ2xVB3Bnf1FPHNYLFpWSELmT5lC5ig1YzzSgt1hJrOwrXeijMxlD011cmV673jOdg==}
     url: jdbc:mysql://${HOST:123.56.49.202}:${POST:3306}/${HWORK_DB_DATABASE:demo}?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
     username: ${USER_NAME:root}
     password: ${PASS_WORD:@Hql6897..}
-    # password: ${spring.datasource.passwordEncry}
 swagger:
   #是否开启swagger
   enabled: true
