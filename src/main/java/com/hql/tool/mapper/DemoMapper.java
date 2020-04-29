@@ -1,8 +1,6 @@
-package com.hql.tool.mapper;
+package com.hql.tool.dto;
 
-import com.hql.tool.dto.DemoDto;
 import com.hql.tool.model.Demo;
-import com.hql.tool.vo.DemoVO;
 
 public interface DemoMapper{
     int deleteByPrimaryKey(Integer id);
@@ -16,6 +14,4 @@ public interface DemoMapper{
     int updateByPrimaryKeySelective(Demo record);
 
     int updateByPrimaryKey(Demo record);
-
-    DemoVO getCreateDateTime(DemoDto demoDto);
 }
