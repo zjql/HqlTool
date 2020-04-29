@@ -2,14 +2,19 @@ package com.hql.tool.mapper;
 
 import com.hql.tool.dto.DemoDto;
 import com.hql.tool.model.Demo;
+import com.hql.tool.model.DemoExample;
 import com.hql.tool.vo.DemoVO;
 
-public interface DemoMapper{
+import java.util.List;
+
+public interface DemoMapper {
     int deleteByPrimaryKey(Integer id);
 
     int insert(Demo record);
 
     int insertSelective(Demo record);
+
+    List<Demo> selectByExample(DemoExample example);
 
     Demo selectByPrimaryKey(Integer id);
 
