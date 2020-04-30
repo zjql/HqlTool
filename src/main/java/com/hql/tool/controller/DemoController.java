@@ -3,6 +3,7 @@ package com.hql.tool.controller;
 import com.hql.tool.config.annotation.Syslog;
 import com.hql.tool.config.msg.BaseResponse;
 import com.hql.tool.config.msg.ResponseMsgUtil;
+import com.hql.tool.config.utils.ListPageUtil;
 import com.hql.tool.config.utils.page.PageInfos;
 import com.hql.tool.dto.DemoDto;
 import com.hql.tool.service.DemoService;
@@ -35,5 +36,12 @@ public class DemoController {
     @ApiOperation(value = "测试接口",notes = "测试接口")
     public BaseResponse<PageInfos<DemoVO>> getTextData(@RequestBody DemoDto demoDto){
         return ResponseMsgUtil.success(demoService.getTextData(demoDto));
+    }
+
+    @Syslog(description = "测试接口数据(逻辑分页)")
+    @PostMapping("/getTextPageData")
+    @ApiOperation(value = "测试接口",notes = "测试接口")
+    public BaseResponse<ListPageUtil<DemoVO>> getTextPageData(@RequestBody DemoDto demoDto){
+        return ResponseMsgUtil.success(demoService.getTextPageData(demoDto));
     }
 }

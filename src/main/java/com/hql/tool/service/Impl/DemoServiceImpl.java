@@ -1,6 +1,9 @@
 package com.hql.tool.service.Impl;
 
+import cn.hutool.core.collection.ListUtil;
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
+import com.hql.tool.config.utils.ListPageUtil;
 import com.hql.tool.config.utils.page.PageInfos;
 import com.hql.tool.config.utils.page.PageUtil;
 import com.hql.tool.dto.DemoDto;
@@ -30,5 +33,10 @@ public class DemoServiceImpl implements DemoService {
         List<DemoVO> queryList = demoMapper.getCreateDateTime(dto);
        return PageUtil.convertPageObj(DemoVO.class,queryList);
 
+    }
+
+    @Override
+    public ListPageUtil<DemoVO> getTextPageData(DemoDto demoDto) {
+        return ListPageUtil.startPage(demoMapper.getCreateDateTime(demoDto),PageUtil.getPageNum(demoDto),PageUtil.getPageSize(demoDto));
     }
 }
