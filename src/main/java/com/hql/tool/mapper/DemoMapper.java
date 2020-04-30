@@ -22,5 +22,5 @@ public interface DemoMapper {
 
     int updateByPrimaryKey(Demo record);
 
-    DemoVO getCreateDateTime(DemoDto demodto);
+    List<DemoVO> getCreateDateTime(DemoDto demodto);
 }

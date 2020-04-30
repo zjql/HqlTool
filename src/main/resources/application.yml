@@ -3,9 +3,43 @@ spring:
     name: hql-tool
   profiles:
     active: ${SPRING.PROFILES.ACTIVE:dev}
+  datasource:
+    #自定义配置-数据源基础信息
+    base:
+      #数据源类型
+      type: com.alibaba.druid.pool.DruidDataSource
+      #初始链接
+      initial-size: 5
+      #最少链接
+      min-idle: 5
+      #最多链接
+      max-active: 20
+      #超时等待时间
+      max-wait: 60000
+      #间隔多久进行检测,关闭空闲连接
+      time-between-eviction-runs-millis: 60000
+      #一个链接最小生存时间
+      min-evictable-idle-time-millis: 300000
+      #用来检测是否有效的sql
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: true
+      test-on-return: true
+      #打开PSCache,并指定每个连接的PSCache大小
+      pool-prepared-statements: true
+      max-open-prepared-statements: 20
+      # 配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙
+      filters: stat,wall,log4j,config
+      #指定初始化数据源，是否用data.sql来初始化，默认: true
+      initialize: true
+      # 解决druid多数据配置时数据库密码加密问题-指定加密密码解密回调函数
+      password-callback: com.hql.tool.config.datasource.DbPasswordCallback
 mybatis:
   type-aliases-package: com.hql.tool.model
+  #mapper文件位置
   mapper-locations: classpath*:mapper/mysql/*.xml
+  #配置文件位置
+  config-location: classpath:mapper/sqlMapConfig.xml
 server:
   port: ${PORT:8081}
 
