@@ -12,7 +12,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2Doc
 @SpringBootApplication
-@MapperScan(basePackages = "com.hql.tool.mapper")
 public class ToolApplication {
 
     public static void main(String[] args) {

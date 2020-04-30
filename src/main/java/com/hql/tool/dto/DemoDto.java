@@ -13,7 +13,7 @@ import java.io.Serializable;
  */
 @Data
 @ApiModel(value = "DemoDto",discriminator = "测试入参")
-public class DemoDto implements Serializable {
+public class DemoDto extends QueryParamsBaseDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 

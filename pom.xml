@@ -21,6 +21,9 @@
         <swagger.version>1.5.1.RELEASE</swagger.version>
         <gson.version>2.8.5</gson.version>
         <aspectj.version>1.9.5</aspectj.version>
+        <pagehelper.version>4.1.6</pagehelper.version>
+        <hutool.version>5.3.2</hutool.version>
+        <log4j.version>1.2.16</log4j.version>
     </properties>
 
     <dependencies>
@@ -86,6 +89,25 @@
             <groupId>org.mybatis.generator</groupId>
             <artifactId>mybatis-generator-core</artifactId>
             <version>1.3.7</version>
+        </dependency>
+        <!-- pagehelper -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${pagehelper.version}</version>
+        </dependency>
+        <!-- hutool -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${hutool.version}</version>
+        </dependency>
+        <!-- log4j -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <build>

@@ -1,10 +1,17 @@
 spring:
   datasource:
     # 配置数据库信息
-    driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://${HOST:123.56.49.202}:${POST:3306}/${HWORK_DB_DATABASE:demo}?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
-    username: ${USER_NAME:root}
-    password: ${PASS_WORD:@Hql6897..}
+    mysql:
+      driver-class-name: com.mysql.jdbc.Driver
+      #数据库密码加密(privateKey/publicKey/passwordEncry通过如下方式加密生成)
+      #java –cp druid-1.1.8.jar com.alibaba.druid.filter.config.ConfigTools 你的密码
+      privateKey: ${MYSQL_PRIVATEKEY:MIIBVgIBADANBgkqhkiG9w0BAQEFAASCAUAwggE8AgEAAkEAqhx8VlhXq6OgUQxWiLSGBi3PIGeCG2c7EvBrq+yYqWGYQh13jmTamQttYBr4Jh+4Rke9ydnTaqmYpNbCUF/IxwIDAQABAkEApYWsMnQpclh3kQVZWhGV64M9bIFrJvDumUIY8qP3867tChjIYxwjD9cyvou7ov/tTBgwXH/jA8MCqru8kgnSAQIhAN4d2lsPUZ+aIAtoOB8ehODH94VnZLGcaj+OM65FhLsBAiEAxA+1bAYbwKVxh03YssrymfFzdB8X6d16c5z57jkJa8cCIQCQ/84PCfYQCc6Hg9a3QfYew4vrc67BX8ngiZVlXA6lAQIhAJvobfln5hvMtDnHMsIC1uaJ9ahqrWaAg8Z6FtlUK+SzAiBrmbPbGXStO0ddM2QhRFd0jZREt47d8cn4GkRVZmIuWA==}
+      publicKey: ${MYSQL_PUBLICKEY:MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKocfFZYV6ujoFEMVoi0hgYtzyBnghtnOxLwa6vsmKlhmEIdd45k2pkLbWAa+CYfuEZHvcnZ02qpmKTWwlBfyMcCAwEAAQ==}
+      passwordEncry: ${MYSQL_PASSWORDENCRY:An4NyUA+96/EY4yy1jU/r8Vc1p+jse4/ig0pMj52Bxn7HLkXG6fUrTvgXpgExyxo/5nX0wdkB/omrsmyoAB2eQ==}
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000;config.decrypt=true;config.decrypt.key=${spring.datasource.mysql.publicKey};password=${spring.datasource.mysql.passwordEncry};publickey=${spring.datasource.mysql.publicKey}
+      url: jdbc:mysql://${HWORK_DB_HOST:123.56.49.202}:${HWORK_DB_PORT:3306}/${HWORK_DB_DATABASE:demo}?useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
+      username: ${USER_NAME:root}
+      password: ${spring.datasource.mysql.passwordEncry}
 swagger:
   #是否开启swagger
   enabled: true

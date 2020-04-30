@@ -161,6 +161,6 @@
     SELECT founder_name AS  name,
            founder_date AS  dateTime
     FROM demo
-    WHERE founder_name = #{name}
+    WHERE founder_name LIKE concat('%',#{name},'%')
   </select>
 </mapper>
