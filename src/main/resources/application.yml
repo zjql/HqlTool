@@ -6,6 +6,8 @@ spring:
 mybatis:
   type-aliases-package: com.hql.tool.model
   mapper-locations: classpath*:mapper/mysql/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 server:
   port: ${PORT:8081}
 
