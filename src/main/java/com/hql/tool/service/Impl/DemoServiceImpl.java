@@ -1,14 +1,11 @@
 package com.hql.tool.service.Impl;
 
-import cn.hutool.core.collection.ListUtil;
-import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.hql.tool.config.utils.ListPageUtil;
 import com.hql.tool.config.utils.page.PageInfos;
 import com.hql.tool.config.utils.page.PageUtil;
 import com.hql.tool.dto.DemoDto;
 import com.hql.tool.mapper.DemoMapper;
-import com.hql.tool.model.Demo;
 import com.hql.tool.service.DemoService;
 import com.hql.tool.vo.DemoVO;
 import lombok.extern.slf4j.Slf4j;
