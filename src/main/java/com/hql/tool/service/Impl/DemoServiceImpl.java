@@ -8,6 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+
 /**
  * @author zhangzhijie
  * 2020/4/24 21:02
@@ -20,6 +22,8 @@ public class DemoServiceImpl implements DemoService {
 
     @Override
     public Demo getTextData(int id) {
+
+        ArrayList<Object> objects = new ArrayList<>();
         return demoMapper.selectByPrimaryKey(id);
 
     }

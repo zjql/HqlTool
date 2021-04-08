@@ -12,8 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @MapperScan(basePackages = "com.hql.tool.dto")
 public class ToolApplication {
 
+
     public static void main(String[] args) {
         SpringApplication.run(ToolApplication.class, args);
     }
-
 }
